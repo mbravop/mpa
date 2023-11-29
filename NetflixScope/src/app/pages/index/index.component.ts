@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-testimonial',
+  selector: 'app-index',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './testimonial.component.html',
-  styleUrl: './testimonial.component.css'
+  templateUrl: './index.component.html',
+  styleUrl: './index.component.css'
 })
-export class TestimonialComponent {
+export class IndexComponent {
 
 }
