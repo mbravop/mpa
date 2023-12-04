@@ -8,7 +8,6 @@ body {
   /* Estilos para la tabla */
   table {
     width: 100%;
-    border-collapse: collapse;
     margin-bottom: 20px;
   }
   
@@ -19,13 +18,35 @@ body {
     padding: 8px;
   }
   */
-  
+  th{
+    grid-area: A;
+  }
   /* Estilos para las celdas de datos */
   td {
     padding: 8px;
+  }
+
+  #year{
+    grid-area: B;
+  }
+
+  #genre{
+    grid-area: C;
+  }
+
+  #type{
+    grid-area: D;
   }
   
   /* Estilos al pasar el cursor sobre una fila */
   tr:hover {
     background-color: #e6e6e6;
+                         
+  }
+  tr{
+    display: grid;
+    column-gap: 1rem;
+    grid-template-areas: "A A"
+                         "B C"
+                         "D D"
   }

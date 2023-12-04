@@ -4,10 +4,10 @@
     <tbody>
         @for (datum of data; track datum.imdb_id) {
           <tr>
-              <th> {{  datum[ "title" ]  }}  </th>
-            <td> {{  datum[ "release_year" ]  }}  </td>
-            <td> {{  datum[ "genres" ]  }} </td>
-            <td> {{  datum[ "type" ]  }} </td>
+            <th id="title"> {{  datum[ "title" ]  }}  </th>
+            <td id="year"> {{  datum[ "release_year" ]  }}  </td>
+            <td id="genre"> {{  datum[ "genres" ]  }} </td>
+            <td id="type"> {{  datum[ "type" ]  }} </td>
           </tr>
         } @empty {
           <tr>
