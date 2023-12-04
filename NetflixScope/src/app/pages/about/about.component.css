@@ -1,0 +1,31 @@
+/* Reset de estilos para quitar los márgenes predeterminados */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos para la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para las celdas del encabezado 
+  th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+  }
+  */
+  
+  /* Estilos para las celdas de datos */
+  td {
+    padding: 8px;
+  }
+  
+  /* Estilos al pasar el cursor sobre una fila */
+  tr:hover {
+    background-color: #e6e6e6;
+  }
