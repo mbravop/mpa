@@ -1,52 +1,43 @@
-/* Reset de estilos para quitar los márgenes predeterminados */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Estilos para la tabla */
-  table {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilos para las celdas del encabezado 
-  th {
-    background-color: #f2f2f2;
-    text-align: left;
-    padding: 8px;
-  }
-  */
-  th{
-    grid-area: A;
-  }
-  /* Estilos para las celdas de datos */
-  td {
-    padding: 8px;
-  }
 
-  #year{
-    grid-area: B;
-  }
+.card-container {
+  margin: 2%; /* Ajusta el margen según tus necesidades, esto es un ejemplo */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
 
-  #genre{
-    grid-area: C;
-  }
+.card {
+  background: linear-gradient(45deg, #333, #424242);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 250px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  #type{
-    grid-area: D;
-  }
-  
-  /* Estilos al pasar el cursor sobre una fila */
-  tr:hover {
-    background-color: #e6e6e6;
-                         
-  }
-  tr{
-    display: grid;
-    column-gap: 1rem;
-    grid-template-areas: "A A"
-                         "B C"
-                         "D D"
-  }
+.empty {
+  text-align: center;
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.genres ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.genres li {
+  margin-bottom: 8px;
+}
+
+.type {
+  text-align: center;
+}

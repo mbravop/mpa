@@ -1,21 +1,26 @@
 <!-- Tabla con datos -->
 
-<table style="align-items: center;">
-    <tbody>
-        @for (datum of data; track datum.imdb_id) {
-          <tr>
-            <th id="title"> {{  datum[ "title" ]  }}  </th>
-            <td id="year"> {{  datum[ "release_year" ]  }}  </td>
-            <td id="genre"> {{  datum[ "genres" ]  }} </td>
-            <td id="type"> {{  datum[ "type" ]  }} </td>
-          </tr>
-        } @empty {
-          <tr>
-            <td colspan="4" class="text-center">Aún no hay datos</td>
-          </tr>
-        }
-    </tbody>
-</table>
+<div class="card-container">
+    @for (datum of data; track datum.imdb_id) {
+    <div class="card">
+        <h2 class="title"> {{ datum["title"] }} </h2>
+        <p class="year"> Year: {{ datum["release_year"] }} </p>
+        <p class="genres"> Genres:  
+            @for (genre of datum["genres"].replace("[", '').replace("']", '').split(","); track genre) {
+                <div>{{ genre.trim().replace("'", '').replace("'", '') }}</div>
+            }
+        </p>
+        <p class="type"> {{ datum["type"] }} </p>
+    </div>
+    } @empty {
+    <div class="card empty">
+        <p class="text-center">Aún no hay datos</p>
+    </div>
+    }
+</div>
+
+
+<!-- Fin Tabla con datos -->
 
 
 <!-- About Start -->
@@ -34,16 +39,20 @@
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <p class="d-inline-block bg-secondary text-primary py-1 px-4">About Us</p>
                 <h1 class="text-uppercase mb-4">More Than Just A Haircut. Learn More About Us!</h1>
-                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
+                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
+                    ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet
+                    diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
                 <div class="row g-4">
                     <div class="col-md-6">
                         <h3 class="text-uppercase mb-3">Since 1990</h3>
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
+                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
+                            diam et eos.</p>
                     </div>
                     <div class="col-md-6">
                         <h3 class="text-uppercase mb-3">1000+ clients</h3>
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
+                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
+                            diam et eos.</p>
                     </div>
                 </div>
             </div>
