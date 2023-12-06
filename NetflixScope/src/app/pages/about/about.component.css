@@ -8,7 +8,7 @@
 }
 
 .card {
-  background: linear-gradient(45deg, #333, #424242);
+  background: linear-gradient(45deg, #333, #3a3a3a);
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
