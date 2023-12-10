@@ -32,7 +32,7 @@
           with:
             node-version: "18"       
         - name: Install deps
-          run: cd mpa/NetflixScope && npm install
+          run: cd NetflixScope && npm install
         - name: Build
           run: npm run build:prod    
         - name: Deploy
