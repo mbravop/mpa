@@ -34,7 +34,7 @@
         - name: Install deps
           run: cd NetflixScope && npm install
         - name: Build
-          run: npm run build:prod    
+          run: cd NetflixScope && npm run build:prod    
         - name: Deploy
           uses: crazy-max/ghaction-github-pages@v3.1.0
           with:
