@@ -32,12 +32,12 @@
           with:
             node-version: "18"       
         - name: Install deps
-          run: cd NetflixScope && npm install
+          run: npm install
         - name: Build
-          run: cd NetflixScope && npm run build:prod    
+          run: npm run build:prod    
         - name: Deploy
           uses: crazy-max/ghaction-github-pages@v3.1.0
           with:
-            build_dir: NetflixScope/dist/netflix-scope/browser
+            build_dir: dist/netflix-scope/browser
           env:
             GITHUB_TOKEN:  ${{secrets.GITHUB_TOKEN}} 
