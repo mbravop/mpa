@@ -25,4 +25,6 @@ export class AboutComponent {
       this.data = dataArray.slice(0,50);
     })
   }
+
+  
 }
