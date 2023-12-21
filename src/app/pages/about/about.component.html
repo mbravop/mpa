@@ -1,7 +1,22 @@
 <div id="div_buscador">
-    <input _ngcontent-ng-c1461857055="" type="text" id="buscador" placeholder="Busque por título, género, año o tipo..." class="form-control bg-transparent">
+    <input #buscador (keyup.enter)="buscar(buscador.value)" _ngcontent-ng-c1461857055="" type="text" id="buscador" placeholder="Busque por título, género, año o tipo..." class="form-control bg-transparent">
+    <button id="boton-busqueda" type="submit" (click)="buscar(buscador.value)" class="text-primary d-inline-block bg-transparent"> <i class="bi bi-search"></i></button>
 </div>
 
+<!-- Pagination Start -->
+<div class="pagination">
+    <button class="d-inline-block bg-secondary text-primary flecha" (click)="prevPage()" [disabled]="currentPage === 1">
+      <i class="fa fa-arrow-left"></i>
+    </button>
+    <ng-container *ngFor="let page of getArrayPages()">
+      <button (click)="goToPage(page)" [class.active]="page === currentPage">{{ page }}</button>
+    </ng-container>
+    <button class="d-inline-block bg-secondary text-primary flecha" (click)="nextPage()" [disabled]="currentPage === this.totalPages">
+      <i class="fa fa-arrow-right"></i>
+    </button>
+  </div>
+  
+<!-- Pagination End -->
 <!-- Tabla con datos -->
 
 <div class="card-container">
@@ -18,14 +33,13 @@
     </div>
     } @empty {
     <div class="card empty">
-        <p class="text-center">Aún no hay datos</p>
+        <p class="text-center">No se encuentra la película - serie</p>
     </div>
     }
 </div>
 
 
 <!-- Fin Tabla con datos -->
-
 
 <!-- About Start -->
 <div class="container-xxl py-5">

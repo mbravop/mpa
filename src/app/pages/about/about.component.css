@@ -1,4 +1,3 @@
-
 .card-container {
   margin: 2%; /* Ajusta el margen según tus necesidades, esto es un ejemplo */
   display: flex;
@@ -35,7 +34,7 @@
 }
 
 .genres li {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .type {
@@ -45,4 +44,43 @@
 #buscador {
   margin-top: 10px;
   width: 50%;
+}
+
+#div_buscador{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+#boton-busqueda{
+  border-radius: 5%;
+  margin-top: 10px;
+  padding: 0 15px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.pagination button.active {
+  color: red; /* Color rojo para la página actual */
+}
+
+.pagination button {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  color:aliceblue;
+}
+
+.flecha{
+  border-radius: 50%;
+}
+.flecha:disabled{
+  opacity: 0.5;
 }
