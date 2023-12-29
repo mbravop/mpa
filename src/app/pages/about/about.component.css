@@ -46,6 +46,12 @@
   width: 50%;
 }
 
+#titulo{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 #div_buscador{
   display: flex;
   flex-wrap: wrap;
